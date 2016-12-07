@@ -498,6 +498,7 @@ public class PackageInstallerActivity extends OverlayTouchActivity implements On
         final boolean requestFromUnknownSource = isInstallRequestFromUnknownSource(getIntent());
         if (!requestFromUnknownSource) {
             initiateInstall();
+            return;
         }
 
         // If the admin prohibits it, or we're running in a managed profile, just show error
